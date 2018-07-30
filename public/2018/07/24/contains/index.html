@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>js判断一个元素是不是另一个元素的子元素 | EricoChong</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在做一些效果时，很经常会用到 ==这个元素是否在指定元素内 #03a9f4==，特别是在一些鼠标相关事件的应用中，例如，在做弹窗的时候，最常遇到的需求就是，点击弹窗外的部分弹窗需要收回。实现方式多种多想，下面是我学习到的一种方式： 1234567891011121314function isInThis(target,parent)&amp;#123;	//首先要做空元素判断和是否为body	whi">
+  <meta name="description" content="在做一些效果时，很经常会用到 这个元素是否在指定元素内，特别是在一些鼠标相关事件的应用中，例如，在做弹窗的时候，最常遇到的需求就是，点击弹窗外的部分弹窗需要收回。实现方式多种多想，下面是我学习到的一种方式： 1234567891011121314function isInThis(target,parent)&amp;#123;	//首先要做空元素判断和是否为body	whild ( target">
 <meta name="keywords" content="JS,DOM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js判断一个元素是不是另一个元素的子元素">
 <meta property="og:url" content="http://yoursite.com/2018/07/24/contains/index.html">
 <meta property="og:site_name" content="EricoChong">
-<meta property="og:description" content="在做一些效果时，很经常会用到 ==这个元素是否在指定元素内 #03a9f4==，特别是在一些鼠标相关事件的应用中，例如，在做弹窗的时候，最常遇到的需求就是，点击弹窗外的部分弹窗需要收回。实现方式多种多想，下面是我学习到的一种方式： 1234567891011121314function isInThis(target,parent)&amp;#123;	//首先要做空元素判断和是否为body	whi">
+<meta property="og:description" content="在做一些效果时，很经常会用到 这个元素是否在指定元素内，特别是在一些鼠标相关事件的应用中，例如，在做弹窗的时候，最常遇到的需求就是，点击弹窗外的部分弹窗需要收回。实现方式多种多想，下面是我学习到的一种方式： 1234567891011121314function isInThis(target,parent)&amp;#123;	//首先要做空元素判断和是否为body	whild ( target">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-24T08:27:42.641Z">
+<meta property="og:updated_time" content="2018-07-25T06:23:55.229Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js判断一个元素是不是另一个元素的子元素">
-<meta name="twitter:description" content="在做一些效果时，很经常会用到 ==这个元素是否在指定元素内 #03a9f4==，特别是在一些鼠标相关事件的应用中，例如，在做弹窗的时候，最常遇到的需求就是，点击弹窗外的部分弹窗需要收回。实现方式多种多想，下面是我学习到的一种方式： 1234567891011121314function isInThis(target,parent)&amp;#123;	//首先要做空元素判断和是否为body	whi">
+<meta name="twitter:description" content="在做一些效果时，很经常会用到 这个元素是否在指定元素内，特别是在一些鼠标相关事件的应用中，例如，在做弹窗的时候，最常遇到的需求就是，点击弹窗外的部分弹窗需要收回。实现方式多种多想，下面是我学习到的一种方式： 1234567891011121314function isInThis(target,parent)&amp;#123;	//首先要做空元素判断和是否为body	whild ( target">
   
     <link rel="alternative" href="/atom.xml" title="EricoChong" type="application/atom+xml">
   
@@ -165,7 +165,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>   在做一些效果时，很经常会用到 ==这个元素是否在指定元素内 #03a9f4==，特别是在一些鼠标相关事件的应用中，例如，在做弹窗的时候，最常遇到的需求就是，点击弹窗外的部分弹窗需要收回。实现方式多种多想，下面是我学习到的一种方式：</p>
+        <p>   在做一些效果时，很经常会用到 <strong>这个元素是否在指定元素内</strong>，特别是在一些鼠标相关事件的应用中，例如，在做弹窗的时候，最常遇到的需求就是，点击弹窗外的部分弹窗需要收回。实现方式多种多想，下面是我学习到的一种方式：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isInThis</span>(<span class="params">target,parent</span>)</span>&#123;</span><br><span class="line">	<span class="comment">//首先要做空元素判断和是否为body</span></span><br><span class="line">	whild ( target != undifinde &amp;&amp;obj != <span class="literal">null</span> &amp;&amp; obj.tagName.toUpperCase() != <span class="string">'BODY'</span>)&#123;</span><br><span class="line">		<span class="comment">//判断当前点击对象是否是所指定的元素</span></span><br><span class="line">		<span class="keyword">if</span> ( target == parent ) &#123;</span><br><span class="line">			<span class="comment">//判断成功返回true</span></span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//上述条件不满足将target重新赋值为其上一级</span></span><br><span class="line">		target = target.parentNode;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//不满足所有返回false</span></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上述的方法是我说了解到的比较简单的而且没有任何兼容性问题的方法，下面描述第二种方法，就是js的contains方法，这个方法通常会用来判断一个字符串是否包含另外一个字符串，也可以用来判断元素间的包含关系。</p>
 <pre><code>代码：
@@ -426,11 +426,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">JS,DOM</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color2">JS,DOM</a>
               </li>
              
               <li class="article-tag-list-item">

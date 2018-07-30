@@ -17,7 +17,7 @@
 <meta property="og:description" content="一、介绍Vue是一套用于构建用户界面的渐进式框架，说白了就是个很牛X的前端框架，谁用谁知道。Vue的特点：  是一个构建用户界面的框架 是一个轻量级的MVVM框架，类似于Angular、react这样的 是数据驱动和组件化的前端开发方式 丰富简单的API实现响应式的数据绑定和组合的视图组件 容易上手第一次接触的同学建议先去通读  官方文档 。  二、第一个实例123456789101112&amp;lt;">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://cn.vuejs.org/images/lifecycle.png">
-<meta property="og:updated_time" content="2018-07-24T02:05:20.000Z">
+<meta property="og:updated_time" content="2018-07-25T06:25:51.122Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue基础学习笔记 （一）">
 <meta name="twitter:description" content="一、介绍Vue是一套用于构建用户界面的渐进式框架，说白了就是个很牛X的前端框架，谁用谁知道。Vue的特点：  是一个构建用户界面的框架 是一个轻量级的MVVM框架，类似于Angular、react这样的 是数据驱动和组件化的前端开发方式 丰富简单的API实现响应式的数据绑定和组合的视图组件 容易上手第一次接触的同学建议先去通读  官方文档 。  二、第一个实例123456789101112&amp;lt;">
@@ -176,12 +176,12 @@
 <li>容易上手<br>第一次接触的同学建议先去通读  <a href="https://cn.vuejs.org/" target="_blank" rel="noopener">官方文档</a> 。</li>
 </ul>
 <h1 id="二、第一个实例"><a href="#二、第一个实例" class="headerlink" title="二、第一个实例"></a>二、第一个实例</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">  &#123;&#123; message &#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./js/vue.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>   //引入vue文件</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">	<span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">		el:<span class="string">"#app"</span>,</span></span><br><span class="line"><span class="undefined">		data:&#123;</span></span><br><span class="line"><span class="javascript">			messae: <span class="string">"Hello Vue!"</span></span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">	&#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>以上就是最简单的Vue应用，看起来这跟渲染一个字符串模板非常类似，但是 Vue 在背后做了大量工作。现在数据和 DOM 已经被建立了关联，所有东西都是响应式的。我们要怎么确认呢？打开你的浏览器的 JavaScript 控制台 (就在这个页面打开)，并修改 app.message 的值，你将看到上例相应地更新。<br>每个Vue应用都是通过 ==Vue #dd146a== 函数创建一个新的 <strong>Vue 实例</strong> 开始的：</p>
+<p>以上就是最简单的Vue应用，看起来这跟渲染一个字符串模板非常类似，但是 Vue 在背后做了大量工作。现在数据和 DOM 已经被建立了关联，所有东西都是响应式的。我们要怎么确认呢？打开你的浏览器的 JavaScript 控制台 (就在这个页面打开)，并修改 app.message 的值，你将看到上例相应地更新。<br>每个Vue应用都是通过 <strong>Vue</strong>  函数创建一个新的 <strong>Vue 实例</strong> 开始的：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123; </span><br><span class="line">	<span class="comment">//选项</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>==el #dd146a== 传入的是Vue实例的作用域，所有Vue的操作都需要在该作用域下才会起作用。<br>==data #dd146a==  对象包含了一个Vue实例所有的属性。当属性的值被改变是，视图就会产生 “响应”，即匹配更新为新的值。</p>
+<p><strong>el</strong> 传入的是Vue实例的作用域，所有Vue的操作都需要在该作用域下才会起作用。<br><strong>data #dd146a</strong>  对象包含了一个Vue实例所有的属性。当属性的值被改变是，视图就会产生 “响应”，即匹配更新为新的值。</p>
 <h3 id="实例生命周期钩子"><a href="#实例生命周期钩子" class="headerlink" title="实例生命周期钩子"></a>实例生命周期钩子</h3><p>每个 Vue 实例在被创建时都要经过一系列的初始化过程——例如，需要设置数据监听、编译模板、将实例挂载到 DOM 并在数据变化时更新 DOM 等。同时在这个过程中也会运行一些叫做生命周期钩子的函数，这给了用户在不同阶段添加自己的代码的机会。<br>比如 created 钩子可以用来在一个实例被创建之后执行代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    a: <span class="number">1</span></span><br><span class="line">  &#125;,</span><br><span class="line">  created: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// `this` 指向 vm 实例</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'a is: '</span> + <span class="keyword">this</span>.a)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// =&gt; "a is: 1"</span></span><br></pre></td></tr></table></figure>
-<h3 id="注意：-ea0617"><a href="#注意：-ea0617" class="headerlink" title="==注意： #ea0617=="></a><strong><em>==注意： #ea0617==</em></strong></h3><blockquote>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a><strong><em>注意：</em></strong></h3><blockquote>
 <p>不要在选项属性或回调上使用箭头函数，<br>比如 created: () =&gt; console.log(this.a) 或 vm.$watch(‘a’, newValue =&gt; this.myMethod())。<br>因为箭头函数是和父级上下文绑定在一起的，this 不会是如你所预期的 Vue 实例，经常导致<br>Uncaught TypeError: Cannot read property of undefined 或<br>Uncaught TypeError: this.myMethod is not a function 之类的错误。</p>
 </blockquote>
 <h3 id="生命周期图示"><a href="#生命周期图示" class="headerlink" title="生命周期图示"></a>生命周期图示</h3><p> <img src="https://cn.vuejs.org/images/lifecycle.png" alt="enter description here"><br> 图中的方法并不需要立马了解清楚，在不断的学习使用后自然而然能掌握了。</p>
@@ -395,11 +395,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">JS,DOM</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color2">JS,DOM</a>
               </li>
              
               <li class="article-tag-list-item">
