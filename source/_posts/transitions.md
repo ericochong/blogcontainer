@@ -520,5 +520,3 @@ new Vue({
 </body>
 </html>
 ```
-
-
