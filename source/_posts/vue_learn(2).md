@@ -1,6 +1,6 @@
 ---
 title: Vue基础学习笔记 （二）
-tags: vue
+tags: Vue
 grammar_cjkRuby: true
 ---
 
