@@ -52,7 +52,7 @@ Vue对slot的描述很简单，我一直都看的懵懵懂懂的，知道看到�
 ```
 最终效果就会是这样：
 
-![](https://segmentfault.com/img/remote/1460000012996222?w=782&h=342)
+![](./images/736636367-5a69ebacb0d57.png)
 ## 具名插槽
 插槽加了name属性，就变成了具名插槽。具名插槽可以在一个组件中出现N次。出现在不同的位置。
 下面的例子，就是一个有两个具名插槽和单个插槽的组件，这三个插槽被父组件用同一套css样式显示了出来。
@@ -105,7 +105,7 @@ Vue对slot的描述很简单，我一直都看的懵懵懂懂的，知道看到�
 </template>
 显示效果：
 
-![](https://segmentfault.com/img/remote/1460000012996223?w=742&h=456)
+![enter description here](./images/2272418831-5a69ebacc9c41.png)
 可以看到，父组件通过html模板上的slot属性关联具名插槽。没有slot属性的html模板默认关联匿名插槽。
 ## 作用域插槽
 实际上，对比前面两种插槽，我们可以叫它带数据的插槽。但是作用域插槽要求，在slot上面绑定数据。
@@ -198,6 +198,6 @@ OK，我们说有html模板的情况，就是父组件会往子组件插模板�
 ```
 显示效果：
 
-![](https://segmentfault.com/img/remote/1460000012996224?w=703&h=651)
+![](https://sfault-image.b0.upaiyun.com/344/357/3443579452-5a69ebac86ae9)
 
 原文地址：[深入理解vue中的slot与slot-scope](https://segmentfault.com/a/1190000012996217)
