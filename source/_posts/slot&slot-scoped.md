@@ -52,7 +52,7 @@ Vue对slot的描述很简单，我一直都看的懵懵懂懂的，知道看到�
 ```
 最终效果就会是这样：
 
-![](./images/736636367-5a69ebacb0d57.png)
+![](https://sfault-image.b0.upaiyun.com/736/636/736636367-5a69ebacb0d57)
 ## 具名插槽
 插槽加了name属性，就变成了具名插槽。具名插槽可以在一个组件中出现N次。出现在不同的位置。
 下面的例子，就是一个有两个具名插槽和单个插槽的组件，这三个插槽被父组件用同一套css样式显示了出来。
@@ -92,6 +92,7 @@ Vue对slot的描述很简单，我一直都看的懵懵懂懂的，知道看到�
 </template>
 ```
 子组件：
+```html
 <template>
   <div class="child">
     // 具名插槽
@@ -103,9 +104,10 @@ Vue对slot的描述很简单，我一直都看的懵懵懂懂的，知道看到�
     <slot></slot>
   </div>
 </template>
+```
 显示效果：
 
-![enter description here](./images/2272418831-5a69ebacc9c41.png)
+![enter description here](https://sfault-image.b0.upaiyun.com/227/241/2272418831-5a69ebacc9c41)
 可以看到，父组件通过html模板上的slot属性关联具名插槽。没有slot属性的html模板默认关联匿名插槽。
 ## 作用域插槽
 实际上，对比前面两种插槽，我们可以叫它带数据的插槽。但是作用域插槽要求，在slot上面绑定数据。
